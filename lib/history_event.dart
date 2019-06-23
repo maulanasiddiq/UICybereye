@@ -11,6 +11,7 @@ class _HistoryEventState extends State<HistoryEvent> {
     return Scaffold(
       appBar: AppBar(
         title: Text("History event"),
+        automaticallyImplyLeading: false,
         actions: <Widget>[
           IconButton(onPressed: (){},icon: Icon(Icons.notifications),
 
@@ -78,7 +79,7 @@ class _HistoryEventState extends State<HistoryEvent> {
                                           padding: const EdgeInsets.only(
                                               top: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -140,7 +141,7 @@ class _HistoryEventState extends State<HistoryEvent> {
                                           padding: const EdgeInsets.only(
                                               top: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -202,7 +203,7 @@ class _HistoryEventState extends State<HistoryEvent> {
                                           padding: const EdgeInsets.only(
                                               top: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -264,7 +265,7 @@ class _HistoryEventState extends State<HistoryEvent> {
                                           padding: const EdgeInsets.only(
                                               top: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -325,7 +326,7 @@ class _HistoryEventState extends State<HistoryEvent> {
                                           padding: const EdgeInsets.only(
                                               top: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -386,7 +387,7 @@ class _HistoryEventState extends State<HistoryEvent> {
                                           padding: const EdgeInsets.only(
                                               top: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),

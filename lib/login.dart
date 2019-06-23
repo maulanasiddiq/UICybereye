@@ -1,3 +1,5 @@
+import 'package:cybereye/bottom.dart';
+import 'package:cybereye/register.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -20,52 +22,68 @@ class _LoginState extends State<Login> {
             ),
             TextField(
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+              border: OutlineInputBorder(),
               labelText: 'Username',
             )),
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: TextField(
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
+                border: OutlineInputBorder(),
                 labelText: 'Password',
               )),
             ),
-
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             SizedBox(
               width: double.infinity,
-              child: RaisedButton
-              (
-                              color: Colors.blue,
-                onPressed: () {},
+              child: RaisedButton(
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Bottom()));
+                },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
-                child: Text("Login",style: TextStyle(color: Colors.white),),
+                child: Text(
+                  "Login",
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text("Don't have an account ?"),
-                Text(
-                  "Register Now",
-                  style: TextStyle(color: Colors.blue),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Register()));
+                  },
+                  child: Text(
+                    "Register Now",
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 )
               ],
             ),
-            Text("Or",textAlign: TextAlign.center,),
-
+            Text(
+              "Or",
+              textAlign: TextAlign.center,
+            ),
             RaisedButton(
-                            color: Colors.white,
+              color: Colors.white,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30)
-              ),
+                  borderRadius: BorderRadius.circular(30)),
               onPressed: () {},
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset("assets/f.png",width: 20,),
+                  Image.asset(
+                    "assets/fb.png",
+                    width: 30,
+                  ),
                   Text(" Sign in with facebook")
                 ],
               ),
@@ -73,13 +91,15 @@ class _LoginState extends State<Login> {
             RaisedButton(
               color: Colors.white,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30)
-              ),
+                  borderRadius: BorderRadius.circular(30)),
               onPressed: () {},
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset("assets/g.png",width: 20,),
+                  Image.asset(
+                    "assets/google.png",
+                    width: 20,
+                  ),
                   Text(" Sign in with google")
                 ],
               ),

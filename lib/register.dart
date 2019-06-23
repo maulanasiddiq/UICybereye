@@ -1,3 +1,4 @@
+import 'package:cybereye/bottom.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -13,68 +14,62 @@ class _RegisterState extends State<Register> {
         margin: EdgeInsets.all(50),
         child: ListView(
           children: <Widget>[
-            Column(children: <Widget>[
-              Image.asset(
-              "assets/logo_cc.png",
-              height: 150,
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: TextField(
-
-                  decoration:
-                  
-                   InputDecoration(
-                    
-                border: OutlineInputBorder(),
-                labelText: 'Email',
-              )),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: TextField(
-                  decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Fullname',
-              )),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: TextField(
-
-                  decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Password',
-              )),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: TextField(
-                  decoration: InputDecoration(
+            Column(
+              children: <Widget>[
+                Image.asset(
+                  "assets/logo_cc.png",
+                  height: 150,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: TextField(
+                      decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                labelText: 'Re-type Password',
-              )),
+                    labelText: 'Email',
+                  )),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: TextField(
+                      decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Fullname',
+                  )),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: TextField(
+                      decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
+                  )),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: TextField(
+                      decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Re-type Password',
+                  )),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: RaisedButton(
+                    color: Colors.blue,
+                    onPressed: () {
+                      Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Bottom()));
+                    },
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Text(
+                      "Register",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
             ),
-
-
-
-
-            SizedBox(
-              width: double.infinity,
-              child: RaisedButton
-              (
-                              color: Colors.blue,
-                onPressed: () {},
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                child: Text("Login",style: TextStyle(color: Colors.white),),
-              ),
-            ),
-
-                 
-            ],
-            ),
-               
           ],
         ),
       ),

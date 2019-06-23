@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Spacer(),
-                Icon(Icons.notifications_active),
+                Icon(Icons.notifications),
               ]),
             ),
             Expanded(

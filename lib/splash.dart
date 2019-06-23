@@ -1,3 +1,5 @@
+import 'package:cybereye/login.dart';
+import 'package:cybereye/register.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -9,10 +11,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-      Container(
-        
-
+      body: Container(
         margin: EdgeInsets.all(50),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -20,27 +19,35 @@ class _SplashState extends State<Splash> {
             Image.asset("assets/logo_cc.png"),
             SizedBox(
               width: double.infinity,
-                          child: RaisedButton
-                  (
-                    
-                                  color: Colors.blue,
-                    onPressed: () {},
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)),
-                    child: Text("Login",style: TextStyle(color: Colors.white),),
-                  ),
+              child: RaisedButton(
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Login()));
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                child: Text(
+                  "Login",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ),
             SizedBox(
               width: double.infinity,
-                          child: RaisedButton
-                  (
-                    
-                                  color: Colors.white,
-                    onPressed: () {},
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)),
-                    child: Text("Register",style: TextStyle(color: Colors.blue),),
-                  ),
+              child: RaisedButton(
+                color: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Register()));
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                child: Text(
+                  "Register",
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ),
             ),
           ],
         ),

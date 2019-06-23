@@ -11,15 +11,8 @@ class _EventsState extends State<Events> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Text("Event"),
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.arrow_back),
-            );
-          },
-        ),
+        title: Text("Event"),      
+        automaticallyImplyLeading: false,
         actions: <Widget>[
           IconButton(
             onPressed: () {},
@@ -102,7 +95,8 @@ class _EventsState extends State<Events> {
                                           padding: const EdgeInsets.only(
                                               top: 10, right: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
+                                            overflow: TextOverflow.fade,
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -114,13 +108,15 @@ class _EventsState extends State<Events> {
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(left: 10),
-                                          child: Text("Cyber eye Comunity"),
+                                          child: Text("Cybereye Comunity"),
                                         ),
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(left: 10),
                                           child: Text(
-                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
+                                            "Jl. Seruni, Slawi Kabupaten Tegal",
+                                            overflow: TextOverflow.fade,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -179,7 +175,8 @@ class _EventsState extends State<Events> {
                                           padding: const EdgeInsets.only(
                                               top: 10, right: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
+                                            overflow: TextOverflow.fade,
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -191,13 +188,15 @@ class _EventsState extends State<Events> {
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(left: 10),
-                                          child: Text("Cyber eye Comunity"),
+                                          child: Text("Cybereye Comunity"),
                                         ),
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(left: 10),
                                           child: Text(
-                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
+                                            "Jl. Seruni, Slawi Kabupaten Tegal",
+                                            overflow: TextOverflow.fade,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -256,7 +255,8 @@ class _EventsState extends State<Events> {
                                           padding: const EdgeInsets.only(
                                               top: 10, right: 10, left: 10),
                                           child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
+                                            "Training Flutter fundamental",
+                                            overflow: TextOverflow.fade,
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -268,13 +268,15 @@ class _EventsState extends State<Events> {
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(left: 10),
-                                          child: Text("Cyber eye Comunity"),
+                                          child: Text("Cybereye Comunity"),
                                         ),
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(left: 10),
                                           child: Text(
-                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
+                                            "Jl. Seruni, Slawi Kabupaten Tegal",
+                                            overflow: TextOverflow.fade,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -286,83 +288,6 @@ class _EventsState extends State<Events> {
                         ],
                       ),
                     ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Column(
-                        children: <Widget>[
-                          ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              child: Image.asset(
-                                "assets/logo_cc.png",
-                                width: double.infinity,
-                                height: 150,
-                              )),
-                          Row(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(20.0),
-                                child: Row(
-                                  children: <Widget>[
-                                    Column(
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, right: 10, left: 10),
-                                          child: Text(
-                                            "23",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 40),
-                                          ),
-                                        ),
-                                        Text(
-                                          "Juni",
-                                          style: TextStyle(fontSize: 20),
-                                        )
-                                      ],
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, right: 10, left: 10),
-                                          child: Text(
-                                            "Training Flutter fundamental to expert \n visual studio code",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 15),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Text("Cyber eye Comunity"),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Text(
-                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ),
