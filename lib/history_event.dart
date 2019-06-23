@@ -1,3 +1,4 @@
+import 'package:cybereye/detail_event.dart';
 import 'package:flutter/material.dart';
 
 class HistoryEvent extends StatefulWidget {
@@ -13,13 +14,12 @@ class _HistoryEventState extends State<HistoryEvent> {
         title: Text("History event"),
         automaticallyImplyLeading: false,
         actions: <Widget>[
-          IconButton(onPressed: (){},icon: Icon(Icons.notifications),
-
-
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notifications),
           )
         ],
       ),
-
       body: Container(
         height: double.infinity,
         child: Column(
@@ -48,68 +48,72 @@ class _HistoryEventState extends State<HistoryEvent> {
                 child: ListView(
                   shrinkWrap: true,
                   children: <Widget>[
-                    Card(
-                      margin: EdgeInsets.only(top: 10),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Row(
-                                  children: <Widget>[
-                                    ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              child: Image.asset(
-                                "assets/logo_cc.png",
-                                width: 80,
-                                height: 80,
-                              )),
-                          
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 10),
-                                          child: Text(
-                                            "Training Flutter fundamental",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 15),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => EventDetail()));
+                      },
+                      child: Card(
+                        margin: EdgeInsets.only(top: 10),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Column(
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Row(
+                                    children: <Widget>[
+                                      ClipRRect(
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(10),
+                                            bottomRight: Radius.circular(10),
                                           ),
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Text("Cyber eye Comunity"),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Text(
-                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
+                                          child: Image.asset(
+                                            "assets/logo_cc.png",
+                                            width: 80,
+                                            height: 80,
+                                          )),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 10, left: 10),
+                                            child: Text(
+                                              "Training Flutter fundamental",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 10),
+                                            child: Text("Cyber eye Comunity"),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 10),
+                                            child: Text(
+                                                "Jl. Seruni, Slawi Kabupaten Tegal"),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
-
                     Card(
                       margin: EdgeInsets.only(top: 10),
                       shape: RoundedRectangleBorder(
@@ -123,140 +127,15 @@ class _HistoryEventState extends State<HistoryEvent> {
                                 child: Row(
                                   children: <Widget>[
                                     ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              child: Image.asset(
-                                "assets/logo_cc.png",
-                                width: 80,
-                                height: 80,
-                              )),
-                          
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 10),
-                                          child: Text(
-                                            "Training Flutter fundamental",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 15),
-                                          ),
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(10),
                                         ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Text("Cyber eye Comunity"),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Text(
-                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-
-                    Card(
-                      margin: EdgeInsets.only(top: 10),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Row(
-                                  children: <Widget>[
-                                    ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              child: Image.asset(
-                                "assets/logo_cc.png",
-                                width: 80,
-                                height: 80,
-                              )),
-                          
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 10),
-                                          child: Text(
-                                            "Training Flutter fundamental",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 15),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Text("Cyber eye Comunity"),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Text(
-                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-
-                    Card(
-                      margin: EdgeInsets.only(top: 10),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Row(
-                                  children: <Widget>[
-                                    ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              child: Image.asset(
-                                "assets/logo_cc.png",
-                                width: 80,
-                                height: 80,
-                              )),
-                          
+                                        child: Image.asset(
+                                          "assets/logo_cc.png",
+                                          width: 80,
+                                          height: 80,
+                                        )),
                                     Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -308,16 +187,15 @@ class _HistoryEventState extends State<HistoryEvent> {
                                 child: Row(
                                   children: <Widget>[
                                     ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              child: Image.asset(
-                                "assets/logo_cc.png",
-                                width: 80,
-                                height: 80,
-                              )),
-                          
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(10),
+                                        ),
+                                        child: Image.asset(
+                                          "assets/logo_cc.png",
+                                          width: 80,
+                                          height: 80,
+                                        )),
                                     Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -369,16 +247,15 @@ class _HistoryEventState extends State<HistoryEvent> {
                                 child: Row(
                                   children: <Widget>[
                                     ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              child: Image.asset(
-                                "assets/logo_cc.png",
-                                width: 80,
-                                height: 80,
-                              )),
-                          
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(10),
+                                        ),
+                                        child: Image.asset(
+                                          "assets/logo_cc.png",
+                                          width: 80,
+                                          height: 80,
+                                        )),
                                     Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -417,7 +294,126 @@ class _HistoryEventState extends State<HistoryEvent> {
                         ],
                       ),
                     ),
-                
+                    Card(
+                      margin: EdgeInsets.only(top: 10),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Row(
+                                  children: <Widget>[
+                                    ClipRRect(
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(10),
+                                        ),
+                                        child: Image.asset(
+                                          "assets/logo_cc.png",
+                                          width: 80,
+                                          height: 80,
+                                        )),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 10, left: 10),
+                                          child: Text(
+                                            "Training Flutter fundamental",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 15),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 10),
+                                          child: Text("Cyber eye Comunity"),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 10),
+                                          child: Text(
+                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Row(
+                                  children: <Widget>[
+                                    ClipRRect(
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(10),
+                                        ),
+                                        child: Image.asset(
+                                          "assets/logo_cc.png",
+                                          width: 80,
+                                          height: 80,
+                                        )),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 10, left: 10),
+                                          child: Text(
+                                            "Training Flutter fundamental",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 15),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 10),
+                                          child: Text("Cyber eye Comunity"),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 10),
+                                          child: Text(
+                                              "Jl. Seruni, Slawi Kabupaten Tegal"),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

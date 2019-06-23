@@ -1,3 +1,10 @@
+import 'package:cybereye/detail_ebooks.dart';
+import 'package:cybereye/detail_event.dart';
+import 'package:cybereye/detail_video.dart';
+import 'package:cybereye/ebooks.dart';
+import 'package:cybereye/events.dart';
+import 'package:cybereye/tot.dart';
+import 'package:cybereye/video.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -13,10 +20,11 @@ class _HomeState extends State<Home> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 40.0, left: 10, right: 10, bottom: 10),
+              padding: const EdgeInsets.only(
+                  top: 40.0, left: 10, right: 10, bottom: 10),
               child: Row(children: <Widget>[
                 Text(
-                  "Timeline News",
+                  "Home",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -45,7 +53,14 @@ class _HomeState extends State<Home> {
                               child: Row(children: <Widget>[
                                 Text("Upcoming Events"),
                                 Spacer(),
-                                Text("View More"),
+                                InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Events()));
+                                    },
+                                    child: Text("View More")),
                               ]),
                             ),
                             Container(
@@ -54,19 +69,27 @@ class _HomeState extends State<Home> {
                                 shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
                                 children: <Widget>[
-                                  Card(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(5.0),
-                                      child: Column(
-                                        children: <Widget>[
-                                          Image.asset(
-                                            "assets/logo_cc.png",
-                                            height: 70,
-                                            width: 70,
-                                          ),
-                                          Spacer(),
-                                          Text("Google"),
-                                        ],
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => EventDetail()));
+                                    },
+                                    child: Card(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Image.asset(
+                                              "assets/logo_cc.png",
+                                              height: 70,
+                                              width: 70,
+                                            ),
+                                            Spacer(),
+                                            Text("Google"),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -143,7 +166,8 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 10.0, right: 10, left: 10),
+                    padding:
+                        const EdgeInsets.only(top: 10.0, right: 10, left: 10),
                     child: Material(
                       elevation: 3,
                       borderRadius: BorderRadius.circular(10),
@@ -156,7 +180,14 @@ class _HomeState extends State<Home> {
                               child: Row(children: <Widget>[
                                 Text("E-Books"),
                                 Spacer(),
-                                Text("View More"),
+                                InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Ebooks()));
+                                    },
+                                    child: Text("View More")),
                               ]),
                             ),
                             Container(
@@ -165,19 +196,28 @@ class _HomeState extends State<Home> {
                                 shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
                                 children: <Widget>[
-                                  Card(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(5.0),
-                                      child: Column(
-                                        children: <Widget>[
-                                          Image.asset(
-                                            "assets/logo_cc.png",
-                                            height: 70,
-                                            width: 70,
-                                          ),
-                                          Spacer(),
-                                          Text("Google"),
-                                        ],
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailEbooks()));
+                                    },
+                                    child: Card(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Image.asset(
+                                              "assets/logo_cc.png",
+                                              height: 70,
+                                              width: 70,
+                                            ),
+                                            Spacer(),
+                                            Text("Google"),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -251,11 +291,11 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                       ),
-                      
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 10.0, right: 10, left: 10),
+                    padding:
+                        const EdgeInsets.only(top: 10.0, right: 10, left: 10),
                     child: Material(
                       elevation: 3,
                       borderRadius: BorderRadius.circular(10),
@@ -268,7 +308,14 @@ class _HomeState extends State<Home> {
                               child: Row(children: <Widget>[
                                 Text("Video Tutorial"),
                                 Spacer(),
-                                Text("View More"),
+                                InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Video()));
+                                    },
+                                    child: Text("View More")),
                               ]),
                             ),
                             Container(
@@ -277,19 +324,28 @@ class _HomeState extends State<Home> {
                                 shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
                                 children: <Widget>[
-                                  Card(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(5.0),
-                                      child: Column(
-                                        children: <Widget>[
-                                          Image.asset(
-                                            "assets/logo_cc.png",
-                                            height: 70,
-                                            width: 70,
-                                          ),
-                                          Spacer(),
-                                          Text("Google"),
-                                        ],
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailVideo()));
+                                    },
+                                    child: Card(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Image.asset(
+                                              "assets/logo_cc.png",
+                                              height: 70,
+                                              width: 70,
+                                            ),
+                                            Spacer(),
+                                            Text("Google"),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -379,7 +435,14 @@ class _HomeState extends State<Home> {
                               child: Row(children: <Widget>[
                                 Text("Training of Trainer"),
                                 Spacer(),
-                                Text("View More"),
+                                InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Tot()));
+                                    },
+                                    child: Text("View More")),
                               ]),
                             ),
                             Container(

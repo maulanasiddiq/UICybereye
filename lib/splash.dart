@@ -22,8 +22,8 @@ class _SplashState extends State<Splash> {
               child: RaisedButton(
                 color: Colors.blue,
                 onPressed: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Login()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login()));
                 },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
@@ -38,8 +38,8 @@ class _SplashState extends State<Splash> {
               child: RaisedButton(
                 color: Colors.white,
                 onPressed: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Register()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Register()));
                 },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
